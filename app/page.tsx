@@ -18,6 +18,12 @@ const features = [
     description: '输入字符即可查看 Unicode 码点、UTF-8 字节和 HTML 转义序列。',
     href: '/encoding',
     badge: '编码'
+  },
+  {
+    title: '机械键盘布局',
+    description: '比较 100% 至 60% 各类配列，支持切换 Windows / Mac 键位并实时高亮按键输入。',
+    href: '/keyboards',
+    badge: '输入'
   }
 ];
 
