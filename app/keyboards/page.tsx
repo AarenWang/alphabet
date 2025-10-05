@@ -1053,7 +1053,7 @@ const ArrowCluster = ({ isMac, pressedKeys }: { isMac: boolean; pressedKeys: Set
 
 const RowRenderer = ({ row, isMac, pressedKeys }: RowRendererProps) => {
   return (
-    <div className="flex flex-wrap items-center justify-center gap-1">
+    <div className="flex flex-nowrap items-center justify-center gap-1 overflow-x-auto pb-1">
       {row.map((item, index) => {
         if (item.kind === "gap") {
           return <div key={`gap-${index}`} className={gapClasses[item.size ?? "md"]} aria-hidden />;
