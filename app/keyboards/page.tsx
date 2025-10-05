@@ -20,6 +20,8 @@ type KeyDefinition = {
   matches: string[];
   colSpan?: number;
   rowSpan?: number;
+  secondaryLabel?: string;
+
 };
 
 type SpacerDefinition = {
@@ -129,6 +131,7 @@ const createKey = (
     macSymbol: options.macSymbol,
     colSpan: options.colSpan,
     rowSpan: options.rowSpan,
+    secondaryLabel: options.secondaryLabel,
   };
 };
 
@@ -286,9 +289,21 @@ const layouts: KeyboardLayout[] = [
     control: {
       rows: [
         [
-          createKey("Print", { matches: ["PrintScreen"] }),
-          createKey("Scroll", { matches: ["ScrollLock"] }),
-          createKey("Pause", { matches: ["Pause", "Break"] }),
+          createKey("PrtSc", {
+            category: "function",
+            secondaryLabel: "SysRq",
+            matches: ["PrintScreen", "SysRq", "Print"],
+          }),
+          createKey("Scroll", {
+            category: "function",
+            secondaryLabel: "Lock",
+            matches: ["ScrollLock"],
+          }),
+          createKey("Pause", {
+            category: "function",
+            secondaryLabel: "Break",
+            matches: ["Pause", "Break"],
+          }),
         ],
         [
           createKey("Insert"),
@@ -1002,6 +1017,11 @@ const KeyCap = ({ spec, isMac, pressedKeys, isGrid }: KeyCapProps) => {
         <span className="flex items-center gap-1 text-xs">
           {spec.macSymbol && <span className="text-sm leading-none">{spec.macSymbol}</span>}
           <span>{spec.osLabel.mac}</span>
+        </span>
+      ) : spec.secondaryLabel ? (
+        <span className="flex flex-col items-center leading-tight">
+          <span className="text-xs font-medium">{displayLabel}</span>
+          <span className="text-[10px] font-normal text-slate-300">{spec.secondaryLabel}</span>
         </span>
       ) : (
         <span className="text-xs">{displayLabel}</span>
