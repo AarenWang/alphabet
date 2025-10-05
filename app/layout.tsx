@@ -6,7 +6,8 @@ const navigation = [
   { href: '/', label: '首页' },
   { href: '/phonetics', label: '英语音标' },
   { href: '/greek', label: '希腊字母' },
-  { href: '/encoding', label: '编码查询' }
+  { href: '/encoding', label: '编码查询' },
+  { href: '/keyboards', label: '键盘布局' }
 ];
 
 export const metadata: Metadata = {
