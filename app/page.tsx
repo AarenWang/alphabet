@@ -24,6 +24,12 @@ const features = [
     description: '比较 100% 至 60% 各类配列，支持切换 Windows / Mac 键位并实时高亮按键输入。',
     href: '/keyboards',
     badge: '输入'
+  },
+  {
+    title: '爱因斯坦之谜',
+    description: '经典的逻辑推理谜题，通过线索逐步推理出每个房子的主人特征。',
+    href: '/einstein',
+    badge: '逻辑'
   }
 ];
 
@@ -33,7 +39,7 @@ export default function HomePage() {
       <section className="table-card">
         <h1 className="text-3xl font-bold text-white">Alphabet 语言学习工具箱</h1>
         <p className="mt-4 text-slate-300">
-          通过交互式卡片快速掌握英语音标、希腊字母的读音与用途，并能即时查询任意字符的 Unicode 与 UTF-8 编码。
+          通过交互式卡片快速掌握英语音标、希腊字母的读音与用途，并能即时查询任意字符的 Unicode 与 UTF-8 编码。还包含逻辑推理谜题和键盘布局参考。
         </p>
       </section>
       <section className="grid gap-6 md:grid-cols-2">

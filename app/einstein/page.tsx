@@ -651,11 +651,11 @@ const EinsteinPuzzlePage = () => {
                     <select
                       value={house[property] ?? ""}
                       onChange={(event) => handleSelection(index, property, event.target.value)}
-                      className="w-full rounded-md border border-slate-200 bg-white px-2 py-1 text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
+                      className="w-full rounded-md border border-slate-600 bg-slate-800 px-2 py-1 text-sm text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
                     >
-                      <option value="">请选择</option>
+                      <option value="" className="bg-slate-800 text-white">请选择</option>
                       {PROPERTY_OPTIONS[property].map((option) => (
-                        <option key={option} value={option}>
+                        <option key={option} value={option} className="bg-slate-800 text-white">
                           {option}
                         </option>
                       ))}
