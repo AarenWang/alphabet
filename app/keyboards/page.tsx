@@ -21,6 +21,7 @@ type KeyDefinition = {
   colSpan?: number;
   rowSpan?: number;
   secondaryLabel?: string;
+
 };
 
 type SpacerDefinition = {
