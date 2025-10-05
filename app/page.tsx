@@ -24,6 +24,12 @@ const features = [
     description: '比较 100% 至 60% 各类配列，支持切换 Windows / Mac 键位并实时高亮按键输入。',
     href: '/keyboards',
     badge: '输入'
+  },
+  {
+    title: '爱因斯坦之谜',
+    description: '结合 15 条线索推理出谁养鱼，支持自动演示、提示与即时校验。',
+    href: '/einstein',
+    badge: '逻辑'
   }
 ];
 
